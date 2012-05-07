@@ -21,8 +21,8 @@
     slider.init = function() {
       slider.vars = $.extend({}, $.flexslider.defaults, options);
       $.data(el, 'flexsliderInit', true);
-	    slider.container = $('.slides', slider).first();
-	    slider.slides = $('.slides:first > li', slider);
+      slider.container = $('.slides', slider).first();
+      slider.slides = $('.slides:first > li', slider);
       slider.count = slider.slides.length;
       slider.animating = false;
       slider.currentSlide = slider.vars.slideToStart;
@@ -72,7 +72,7 @@
           slider.container.append(slider.slides.filter(':first').clone().addClass('clone')).prepend(slider.slides.filter(':last').clone().addClass('clone'));
         }
         //create newSlides to capture possible clones
-		slider.newSlides = $('.slides:first > li', slider);
+        slider.newSlides = $('.slides:first > li', slider);
         var sliderOffset = (-1 * (slider.currentSlide + slider.cloneOffset));
         if (slider.vertical) {
           slider.newSlides.css({"display": "block", "width": "100%", "float": "left"});
@@ -137,7 +137,7 @@
       //////////////////////////////////////////////////////////////////
       //FlexSlider: Direction Nav
       if (slider.vars.directionNav) {
-        var directionNavScaffold = $('<ul class="flex-direction-nav"><li><a class="prev" href="#">' + slider.vars.prevText + '</a></li><li><a class="next" href="#">' + slider.vars.nextText + '</a></li></ul>');
+        var directionNavScaffold = $('<ul class="flex-direction-nav"><li class="prev"><a class="prev" href="#">' + slider.vars.prevText + '</a></li><li class="next"><a class="next" href="#">' + slider.vars.nextText + '</a></li></ul>');
         
         if (slider.containerExists) {
           $(slider.controlsContainer).append(directionNavScaffold);
